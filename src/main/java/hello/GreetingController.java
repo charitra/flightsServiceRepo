@@ -2,6 +2,7 @@ package hello;
 
 import java.util.ArrayList;
 
+import org.json.JSONObject;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -15,8 +16,9 @@ public class GreetingController {
     //private final AtomicLong counter = new AtomicLong();
 
     @RequestMapping(method = RequestMethod.POST, value = "/SearchFlight")
-    public Response SearchFlight() {
-        return new Response(template1, template1, new ArrayList<String>(), new ArrayList<String>(), 
+    public Response SearchFlight(JSONObject inputObject) {
+    	String object = (String)inputObject.get("action");
+        return new Response(template1+object, template1+object, new ArrayList<String>(), new ArrayList<String>(), 
         		"MakeMyTrip");
     }
     
