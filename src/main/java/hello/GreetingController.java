@@ -42,7 +42,7 @@ public class GreetingController {
     
     public String readJson() {
     	String inline = "";
-    	String jsonarr_2 = "";
+    	String jsonarr_2 = "action";
     	try
 		{
 			URL url = new URL("http://maps.googleapis.com/maps/api/geocode/json?address=chicago&sensor=false&#8221");
