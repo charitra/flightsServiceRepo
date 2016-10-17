@@ -41,7 +41,7 @@ public class GreetingController {
     }
     
     public String readJson() {
-    	String inline = "";
+    	String inline = "inline";
     	String jsonarr_2 = "action";
     	try
 		{
@@ -97,6 +97,6 @@ public class GreetingController {
 		{
 			e.printStackTrace();
 		}
-    	return jsonarr_2;
+    	return inline;
     }
 }
